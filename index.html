@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI-Driven Platform</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid #334155;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        .api-box {
+            background-color: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            color: #4ade80;
+            margin-top: 15px;
+            min-height: 50px;
+            border: 1px solid #1e293b;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Automation Hub</h1>
+            <p class="subtitle">Built with Codex, Cloudflare, GitHub, and OpenClaw</p>
+        </header>
+
+        <main class="grid">
+            <div class="card">
+                <h2>Platform Status</h2>
+                <p>Your continuous integration environment is active. Cloudflare Pages is monitoring your GitHub repository for real-time deployment updates.</p>
+                <a href="https://cloudflare.com" target="_blank" class="btn">View Cloudflare Dashboard</a>
+            </div>
+
+            <div class="card">
+                <h2>Live API Data Stream</h2>
+                <p>This panel is structured to display dynamic data directly from your API Layer endpoints once your access key is wired in.</p>
+                <div class="api-box" id="api-output">Waiting for OpenClaw / API execution framework trigger...</div>
+                <button class="btn" onclick="simulateData()">Trigger Test Run</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Managed via AI Workflow Orchestration &bull; 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        function simulateData() {
+            const output = document.getElementById('api-output');
+            output.innerText = "Connecting to APILayer... Status: 200 OK\n[Data Simulation Successful]";
+        }
+    </script>
+</body>
+</html>
